@@ -13,7 +13,11 @@ public class DoubleCheck {
         {
             synchronized (DoubleCheck.class)
             {
-                INSTANCE = new DoubleCheck();
+                // !! 第二次判断
+                if(INSTANCE == null)
+                {
+                    INSTANCE = new DoubleCheck();
+                }
             }
         }
         return INSTANCE;

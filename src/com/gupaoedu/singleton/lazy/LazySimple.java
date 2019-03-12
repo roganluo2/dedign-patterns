@@ -4,14 +4,14 @@ public class LazySimple {
 
     private LazySimple(){}
 
-    private static LazySimple INSTACNE;
+    private static LazySimple INSTANCE;
 
     //直接在方法上加上synchronized锁，保证线程同步
     public synchronized static LazySimple getInstance(){
-          if(INSTACNE == null)
+          if(INSTANCE == null)
           {
-              INSTACNE = new LazySimple();
+              INSTANCE = new LazySimple();
           }
-          return INSTACNE;
+          return INSTANCE;
     }
 }
