@@ -1,5 +1,6 @@
 package com.gupaoedu.singleton.test;
 
+import com.gupaoedu.singleton.lazy.InnerClassSingleton;
 import com.gupaoedu.singleton.register.HolderSingleton;
 import com.gupaoedu.singleton.register.ThreadLocalSingleton;
 
@@ -12,7 +13,13 @@ public class MainTest {
     public static void main(String[] args) {
 //        testHolderSingleton();
 //        testEnumSingleton();
-        testThreadLocalSingleton();
+//        testThreadLocalSingleton();
+        testInnerClassSingleton();
+    }
+
+    private static void testInnerClassSingleton() {
+        InnerClassSingleton instance = InnerClassSingleton.getInstance();
+
     }
 
     private static void testThreadLocalSingleton() {

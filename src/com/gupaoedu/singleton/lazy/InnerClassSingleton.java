@@ -20,6 +20,9 @@ public class InnerClassSingleton {
     {
         //！！这里加了 final,防止被修改，同时属性也是用private，只能在当前内中访问
         private final static InnerClassSingleton INSTANCE = new InnerClassSingleton();
+        public SingletonHolder(){
+            System.out.println("initialize inner class");
+        }
     }
 
 }
