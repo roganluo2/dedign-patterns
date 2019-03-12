@@ -5,7 +5,7 @@ package com.gupaoedu.factory.abstracts;
  *
  * Created by 召君王 on 2019/3/10.
  */
-public interface IHouseholdFactory {
+interface IHouseholdFactory {
     /**
      * 产品电脑
      * @return
