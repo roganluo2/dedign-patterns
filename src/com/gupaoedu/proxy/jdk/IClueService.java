@@ -7,4 +7,5 @@ public interface IClueService {
 
     int modify(Clue clue, Integer userId);
 
+
 }

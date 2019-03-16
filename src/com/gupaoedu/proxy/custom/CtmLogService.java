@@ -1,18 +1,16 @@
-package com.gupaoedu.proxy.jdk;
+package com.gupaoedu.proxy.custom;
 
-import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
-import java.lang.reflect.Proxy;
 
 /**
  * Created by 召君王 on 2019/3/15.
  */
-public class AopProxy implements InvocationHandler {
+public class CtmLogService implements CtmInvocationHandler {
 
     private Object obj;
 
-    public AopProxy(Object obj) {
+    public CtmLogService(Object obj) {
         this.obj = obj;
     }
 
@@ -40,7 +38,7 @@ public class AopProxy implements InvocationHandler {
 
 
     public Object getInstance(){
-        return Proxy.newProxyInstance(this.getClass().getClassLoader(), obj.getClass().getInterfaces() , this);
+        return CtmProxy.newProxyInstance(new CtmClassLoader(), obj.getClass().getInterfaces() , this);
     }
 
 }
