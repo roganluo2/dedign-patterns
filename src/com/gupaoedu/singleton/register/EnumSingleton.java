@@ -1,7 +1,10 @@
 package com.gupaoedu.singleton.register;
 
-public enum  EnumSingleton {
-    INSTANCE
+import java.io.Serializable;
+
+public enum  EnumSingleton implements Serializable {
+    INSTANCE,
+    NEW_INSTANCE,
     ;
 
     private Object obj;
@@ -16,6 +19,6 @@ public enum  EnumSingleton {
 
     public static EnumSingleton getInstance()
     {
-        return INSTANCE;
+        return NEW_INSTANCE;
     }
 }
