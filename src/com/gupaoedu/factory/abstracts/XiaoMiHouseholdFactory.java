@@ -5,7 +5,7 @@ package com.gupaoedu.factory.abstracts;
  *
  * Created by 召君王 on 2019/3/10.
  */
-public class XiaoMiHouseholdFactory implements IHouseholdFactory {
+public class XiaoMiHouseHoldFactory implements IHouseHoldFactory {
     @Override
     public Computer createCompute() {
         return new XiaoMiCompute();
