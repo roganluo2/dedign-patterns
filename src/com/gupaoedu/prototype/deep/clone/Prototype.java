@@ -1,4 +1,4 @@
-package com.gupaoedu.prototype.shadow;
+package com.gupaoedu.prototype.deep.clone;
 
 
 /**
@@ -8,6 +8,6 @@ package com.gupaoedu.prototype.shadow;
  */
 public interface Prototype {
 
-    Object clone(Class clazz);
+    Object copy();
 
 }
